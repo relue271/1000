@@ -17,16 +17,76 @@ Furthermore, the input string may be empty and/or not contain any parentheses at
 
 
 
-
-
-
-
-
-
-
-
 def valid_parentheses(string):
   return #TODO
+
+
+
+#tests
+Test.assert_equals(valid_parentheses("  ("),False)
+Test.assert_equals(valid_parentheses(")test"),False)
+Test.assert_equals(valid_parentheses(""),True)
+Test.assert_equals(valid_parentheses("hi())("),False)
+Test.assert_equals(valid_parentheses("hi(hi)()"),True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,15 +122,3 @@ def valid_parentheses(string):
             if abertos < 0:
                 break
     return True if abertos == 0 else False
-
-
-
-
-
-
-#tests
-Test.assert_equals(valid_parentheses("  ("),False)
-Test.assert_equals(valid_parentheses(")test"),False)
-Test.assert_equals(valid_parentheses(""),True)
-Test.assert_equals(valid_parentheses("hi())("),False)
-Test.assert_equals(valid_parentheses("hi(hi)()"),True)
