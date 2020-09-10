@@ -1,0 +1,85 @@
+Converting number into hours and minutes
+in: 67, 67, 120 ...
+out: H:M where H is hour and M is minutes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void time_Convert(int num){
+  bool flag;
+  int hr = 0;
+  do {
+    flag = false;
+    if (num >= 60){
+      hr++;
+      num -= 60;
+      flag = true;
+    }
+  } while (flag);
+  printf('%d:%d', %hr, %num)
+}
+void main(void){
+  time_convert(60);
+  time_convert(67);
+  time_convert(120);
+  return 0;
+}
