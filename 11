@@ -19,48 +19,6 @@ Hint: You're not meant to calculate the factorial. Find another way to find the 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 test.describe("Sample Tests")
 test.it("Should pass sample tests")
 test.assert_equals(zeros(0), 0, "Testing with n = 0")
