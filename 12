@@ -1,0 +1,161 @@
+code wars.com
+
+
+
+
+
+
+We want to generate a function that computes the series starting from 0 and ending until the given number.
+Example:
+Input:
+> 6
+Output:
+0+1+2+3+4+5+6 = 21
+
+Input:
+> -15
+Output:
+-15<0
+
+Input:
+> 0
+Output:
+0=0
+
+
+
+
+
+
+#test
+test.describe("Example Tests")
+tests = (
+    (6, "0+1+2+3+4+5+6 = 21"),
+    (7, "0+1+2+3+4+5+6+7 = 28"),
+    (0, "0=0"), 
+    (-1, "-1<0"), 
+    (-10, "-10<0"),
+)
+for inp, exp in tests:
+    test.assert_equals(show_sequence(inp), exp)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#my code
+def show_sequence(n):
+    #print(n)
+    if n < 0:
+        return str(n)+ "<0"
+    if n == 0:
+        return str(n) + "=0"
+    if n > 0:
+        cadeia = ""
+        soma = 0
+        for e in range(n+1):
+            #print(e)
+            if e == n:
+                cadeia += str(e)
+                soma += e
+                #print(cadeia)
+            else:
+                cadeia += str(e) + "+"
+                soma += e
+                #print(cadeia)
+        cadeia += " = " + str(soma)
+        return cadeia
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
