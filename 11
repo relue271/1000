@@ -1,0 +1,145 @@
+codewars.com
+
+Write a program that will calculate the number of trailing zeros in a factorial of a given number.
+N! = 1 * 2 * 3 * ... * N
+Be careful 1000! has 2568 digits...
+For more info, see: http://mathworld.wolfram.com/Factorial.html
+Examples
+zeros(6) = 1
+# 6! = 1 * 2 * 3 * 4 * 5 * 6 = 720 --> 1 trailing zero
+zeros(12) = 2
+# 12! = 479001600 --> 2 trailing zeros
+Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+test.describe("Sample Tests")
+test.it("Should pass sample tests")
+test.assert_equals(zeros(0), 0, "Testing with n = 0")
+test.assert_equals(zeros(6), 1, "Testing with n = 6")
+test.assert_equals(zeros(30), 7, "Testing with n = 30")
+test.assert_equals(zeros(50), 12, "Testing with n = 50")
+test.assert_equals(zeros(80), 19, "Testing with n = 80")
+test.assert_equals(zeros(120), 28, "Testing with n = 120")
+test.assert_equals(zeros(150), 37, "Testing with n = 150")
+test.assert_equals(zeros(1000), 249, "Testing with n = 1000")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#my code
+def zeros(n):
+    #n = int(input("Digite o valor de n: "))
+    fat = 1
+    i = 2
+    while i <= n:
+        fat = fat * i
+        i = i + 1
+
+    tamanho = len(str(fat))
+    strfat = str(fat)
+    zeros = 0
+    #print(tamanho)
+    #print(fat)
+    for k in range(tamanho-1, -1, -1):
+        #print(strfat[k])
+        if (strfat[k] == "0"):
+            zeros += 1
+            #print('foi um')
+        else:
+            #print('outro numero')
+            break
+    return zeros
